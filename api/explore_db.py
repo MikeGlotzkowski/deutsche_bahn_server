@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup
 class Db_service(object):
     def get():
         date = datetime.datetime.strptime(str(datetime.datetime.now()), "%Y-%m-%d  %H:%M:%S.%f")
-        url = db_url.create_from(resources.LOCATION_RO,
-                                 resources.LOCATION_MUC_OST,
+        url = db_url.create_from(resources.LOCATION_MUC_OST,
+                                 resources.LOCATION_RO,
                                  date.day, date.month, str(date.year)[-2:], date.hour, date.min)
         return Db_service.get_for_url(url)
 
