@@ -1,4 +1,4 @@
-def create_from(from_l, to_l):
+def create_from(from_l, to_l, dd, mm, yy, hh, minmin):
     template_url = """https://reiseauskunft.bahn.de/bin/query.exe/dn?revia=yes&
 existOptimizePrice=1&
 country=DEU&
@@ -9,8 +9,8 @@ S={from_destination}&
 REQ0JourneyStopsSID=&
 Z={to_destination}&
 REQ0JourneyStopsZID=&
-date=Sa%2C+01.06.19&
-time=03%3A00&
+date={dd}.{mm}.{yy}&
+time={hh}%3A{minmin}&
 timesel=depart&
 returnDate=&
 returnTime=&
@@ -24,7 +24,7 @@ rtMode=DB-HYBRID&
 externRequest=yes&
 HWAI=JS%21js%3Dyes%21ajax%3Dyes%21"""
     url = template_url.format(
-        from_destination=from_l, to_destination=to_l)
+        from_destination=from_l, to_destination=to_l, dd=dd, mm=mm, yy=yy, hh=hh, minmin=minmin)
     full_url = "".join(url.splitlines())
     print(full_url)
     return full_url
