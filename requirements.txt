@@ -1,0 +1,8 @@
+Flask
+connexion[swagger-ui]
+Flask-Injector
+fastavro
+elasticsearch
+boto
+requests
+bs4

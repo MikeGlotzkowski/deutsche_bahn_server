@@ -1,0 +1,23 @@
+swagger: "2.0"
+
+info:
+  version: 1.0.0
+  title: db service
+
+basePath: /1.0
+
+schemes:
+  - http
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /db:
+    get:
+      operationId: api.explore_db.Db_service.get
+      responses:
+        '200':
+          description: 'next trains'
+
