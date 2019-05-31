@@ -6,3 +6,5 @@ elasticsearch
 boto
 requests
 bs4
+gevent
+lxml
